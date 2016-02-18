@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  body.bg
+  div.container
+    a(href='/').black-text
+      div.header.header-bg
+        div.clearfix
+          div
+            h1.pull-right The Zine 
+        div.row
+  div.container.bg
+    div.panel
+      if(post.darkBG == true) 
+        div.row
+          div.col-lg-12
+            div.post-headings.panel-title.white-text(style="background-image:url(#{post.bgURL})") #{post.title}
+              a(href="/edit/" + post._id).white-text.pull-right.edit   EDIT
+      else  
+        div.row
+          div.col-lg-12
+            div.post-headings.panel-title.black-text(style="background-image:url(#{post.bgURL})") #{post.title}
+              a(href="/edit/" + post._id).black-text.pull-right.edit EDIT  
+      div.panel-body #{post.body}
+    div.h2
+      a(href="/create").btn.btn-lg.pull-right NEW ARTICLE
+    

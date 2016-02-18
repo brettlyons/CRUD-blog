@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  body.bg
+  div.container
+    div.header.header-bg
+      div.clearfix
+        div
+        h1.pull-right The Zine 
+      div.row
+  div.container.bg
+    for post in blogPosts 
+      div.panel
+          div.row
+            div.col-lg-12
+              if(post.darkBG == true) 
+                a(href="/show/"+post._id)
+                  div.post-headings.panel-title.white-text(style="background-image:url(#{post.bgURL})") #{post.title}
+              else
+                a(href="/show/"+post._id)
+                  div.post-headings.panel-title.black-text(style="background-image:url(#{post.bgURL})") #{post.title}
+          div.panel-body #{post.excerpt}
+    div.h2
+      a(href="/create").btn.btn-lg.pull-right NEW ARTICLE

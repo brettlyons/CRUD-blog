@@ -1,0 +1,36 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+  background-color: white;
+}
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.bg {
+  background-image:url(/images/congruent_outline.png);
+}
+.white-text {
+  color: white;
+}
+.black-text {
+  color:black;
+}
+.header-bg {
+  background-image:url(https://unsplash.imgix.net/photo-1429198739803-7db875882052?dpr=2&fit=crop&fm=jpg&h=1575&q=75&w=1050);
+}
+.edit {
+  background:none;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.no-background {
+  background: white;
+}
+.post-headings {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

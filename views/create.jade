@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  body.bg
+  div.container
+    div.page-header.header-bg
+      a(href='/').black-text
+        div.clearfix
+          h1.pull-right The Zine 
+  div.container.no-background.pull-center
+    h1.pull-left New Article
+    div.row.jumbotron
+    form(action="/create", method="POST")
+      div.row
+        div.col-lg-2 Title
+        div.col-lg-8
+          input(type="text", name="title", size="60")
+      div.row
+        div.col-lg-2 Background URL
+        div.col-lg-8 
+          input(type="url", name="backgroundURL", size="60") 
+      div.row
+        div.col-lg-offset-2.col-lg-1
+          input(type="checkbox", value="true", name="darkBackground")
+        div.col-lg-4  Is the background dark? 
+      div.row
+        div.col-lg-2 Excerpt
+        div.col-lg-8 
+          textarea(name="excerpt", cols="60", rows="5")
+      div.row
+        div.col-lg-2 Body
+        div.col-lg-8 
+          textArea(name="postBody", cols="60", rows="10")
+      div.row
+        div.col-lg-2 
+        div.col-lg-8
+          input(type="submit", value="Add post")
+    form(action="/create", method="GET")
+      div.row
+        div.col-lg-2
+        div.col-lg-8
+          input(type="submit", value="Delete")
